@@ -84,14 +84,14 @@ h2 {
 
 .m_burguer {
 	display: none;
-	width: 80%;
+	width: 340px;
 	padding: 10px;
 	position: absolute;
 	top: 95px;
-	right: 5px;
 	list-style-type: none;
 	border: 1px solid #69007A;
 	background: #FFE5A6;
+	animation: menu_animation 0.2s forwards;
 }
 
 .m_burguer li {
@@ -103,6 +103,7 @@ h2 {
 .m_burguer li a {
 	text-decoration: none;
 	padding-right: 15px;
+	color: #69007A;
 }
 
 .m_burguer li:hover  {
@@ -174,7 +175,7 @@ h2 {
 /* === CAROUSEL ===*/
 
 .carousel {
-	padding: 40px 10% 100px 10%;
+	padding: 40px 10% 100px;
 	text-align: center;
 	background-image: url(imagens/fundo_estrelado_1440.jpg);
 	background-size: cover;
@@ -182,7 +183,7 @@ h2 {
 
 .carousel h2 {
 	color: white;
-	margin-bottom: 60px;
+	margin-bottom: 20px;
 }
 
 .slide {
@@ -369,6 +370,7 @@ h2 {
 
 .contact .forms input:hover, .contact .forms textarea:hover {
 	backdrop-filter: brightness(110%);
+	-webkit-backdrop-filter: brightness(110%);
 }
 
 .form_button {
@@ -544,5 +546,14 @@ h2 {
 	.footer img {
 		margin: 10px 5px;
 		float: none;
+	}
+}
+
+@keyframes menu_animation {
+	from {
+		right: -340px;
+	}
+	to {
+		right: 4px;
 	}
 }
