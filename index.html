@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 	<head>
 
 		<meta charset="UTF-8">
@@ -8,142 +7,151 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Landing Page de um site fictício sobre o Espaço de Terraria">
 		<meta name="keywords" content="Espaço, Terraria, Ilhas flutuantes, Serpes, Trilha Sonora">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="stylesheet" href="estilo.css">
 		<script src="funcoes.js"></script>
-		<link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 		<title>Espaço Terraria</title>
-
 	</head>
-
 	<body>
 
 		<!-- NAVBAR -->
 		<nav class="navbar">
-			<div class="logo">
-				<a href="#hero"><img src="imagens/logo_full.png"></a>
-			</div>
-			<menu class="menu">
-				<img id="burguer" class="burguer" src="imagens/menu_mobile_full.png" onclick="clickMenu()" alt="ícone do menu hambúrguer">
-				<ul class="m_burguer" id="m_burguer">
-					<li><a href="#about">Sobre</a></li>
-					<li><a href="#conversion">Conhecer</a></li>
-					<li style="border: none"><a href="#contact">Contate-nos</a></li>
-				</ul>
-			</menu>
-			<div class="navbar_buttons">
-				<a href="#about" class="button">Sobre</a>
-				<a href="#conversion" class="button">Conhecer</a>
-				<a href="#contact" class="button">Contate-nos</a>
+			<div class="navbar-itens">
+				<div class="logo">
+					<a href="#hero" onclick="clickItem()"><img src="assets/logo_full.png"></a>
+				</div>
+				<div class="navbar_buttons">
+					<a href="#about" class="button description">Sobre</a>
+					<a href="#conversion" class="button description">Conhecer</a>
+					<a href="#contact" class="button description">Contate-nos</a>
+				</div>
+				<menu class="menu">
+					<img id="burguer" src="assets/menu_mobile_full.png" onclick="clickMenu()" alt="ícone do menu hambúrguer">
+					<ul id="burguer_itens">
+						<li><a href="#about" onclick="clickItem()">Sobre</a></li>
+						<li><a href="#conversion" onclick="clickItem()">Conhecer</a></li>
+						<li style="border: none" onclick="clickItem()"><a href="#contact">Contate-nos</a></li>
+					</ul>
+				</menu>
 			</div>
 		</nav>
 
 		<!-- HEADER -->
 		<header id="hero" class="hero">
 			<div class="copy">
-				<h1>Alcance os céus e toque as estrelas &#x2728 </h1>
+				<h1>Alcance os céus e toque as estrelas &#x2728; </h1>
 				<h2>Explore o espaço em Terraria</h2>
 				<p class="description">O Espaço é uma camada que aparece no topo do mundo, onde o céu é sempre escuro e as estrelas visíveis. Nele a gravidade é diminuida, o que significa que o jogador poderá pular mais alto e cair mais lentamente.</p>
-				<a class="button_conversion" href="https://terraria.fandom.com/pt/wiki/Espa%C3%A7o" rel="extern" target="_blank">Conhecer o Espaço</a>
+				<a class="button_conversion description" href="https://terraria.fandom.com/pt/wiki/Espa%C3%A7o" rel="extern" target="_blank">Conhecer o Espaço</a>
 			</div>
 			<div class="hero_img">
-				<img src="imagens/arvore_nuvem_400.png" alt="imagem com árvore do logo de Terraria em cor roxo">
+				<img src="assets/arvore_nuvem_400.png" alt="imagem com árvore do logo de Terraria em cor roxo">
 			</div>
 		</header>
 
 		<!-- CAROUSEL -->
-		<section class="carousel" id="about">
+		<section class="about" id="about">
 			<h2>O que você encontrará no espaço?</h2>
-			<div class="slideshow-container">
-				<div class="slide fade" style="display: block">
-					<div class="back_slide" style="float: left; margin-right: 3%">
-						<img src="imagens/dragon_1280.png" alt="imagem de uma serpe">
+			<div class="carousel">
+				<div class="slideshow-container">
+					<div class="slide fade" style="display: block">
+						<div class="back_slide" style="float: left; margin-right: 3%">
+							<img src="assets/dragon_1280.png" alt="imagem de uma serpe">
+						</div>
+						<div class="text_slide">
+							<p class="description">
+								<strong>Serpes</strong> : são grandes criaturas que assemelham-se a dragões chineses. São inimigos que aparecem apenas no espaço, embora te sigam até o chão caso não sejam vencidos antes. <br><br>
+								Dropa itens como a pipa da serpe
+							</p>
+							<img src="assets/dragon_head_60.png" alt="ícone pipa da serpe">
+						</div>
 					</div>
-					<div class="text_slide">
-						<p class="description">
-							<strong>Serpes</strong> : são grandes criaturas que assemelham-se a dragões chineses. São inimigos que aparecem apenas no espaço, embora te sigam até o chão caso não sejam vencidos antes. <br><br>
-							Dropa itens como a pipa da serpe
-						</p>
-						<img src="imagens/dragon_head_60.png" alt="ícone pipa da serpe">
+					<div class="slide fade">
+						<div class="back_slide" style="float: right; margin-left: 3%">
+							<img src="assets/floating_island_full.png" alt="imagem de uma ilha flutuante">
+						</div>
+						<div class="text_slide">
+							<p class="description">
+								<strong>Ilhas flutuantes</strong> : são estruturas geradas geralmente muito acima da terra, inclusive no espaço. Suscetívies ao aparecimento de inimigos como Serpes e Harpias.<br><br>
+								Contém vários itens celestiais
+							</p>
+							<img src="assets/treasure_chest_60.png" alt="ícone baú celestial">
+						</div>
 					</div>
+					<div class="slide fade">
+						<div class="back_slide" style="float: left; margin-right: 3%">
+							<img src="assets/jukebox_full.png" alt="imagem de uma jukebox">
+						</div>
+						<div class="text_slide">
+							<p class="description">
+								<strong>Trilha sonora</strong> : quando você está no espaço, poderá ouvir uma trilha sonora exclusiva dessa camada.<br><br>
+								Algumas das várias músicas que enriquecem o jogo poderão ser ouvidas
+							</p>
+							<img src="assets/cd_60.png" alt="ícone cd de música">
+						</div>
+					</div>
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
 				</div>
-				<div class="slide fade">
-					<div class="back_slide" style="float: right; margin-left: 3%">
-						<img src="imagens/floating_island_full.png" alt="imagem de uma ilha flutuante">
-					</div>
-					<div class="text_slide">
-						<p class="description">
-							<strong>Ilhas flutuantes</strong> : são estruturas geradas geralmente muito acima da terra, inclusive no espaço. Suscetívies ao aparecimento de inimigos como Serpes e Harpias.<br><br>
-							Contém vários itens celestiais
-						</p>
-						<img src="imagens/treasure_chest_60.png" alt="ícone baú celestial">
-					</div>
+				<div style="text-align:center">
+					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+					<span class="dot" onclick="currentSlide(3)"></span>
 				</div>
-				<div class="slide fade">
-					<div class="back_slide" style="float: left; margin-right: 3%">
-						<img src="imagens/jukebox_full.png" alt="imagem de uma jukebox">
-					</div>
-					<div class="text_slide">
-						<p class="description">
-							<strong>Trilha sonora</strong> : quando você está no espaço, poderá ouvir uma trilha sonora exclusiva dessa camada.<br><br>
-							Algumas das várias músicas que enriquecem o jogo poderão ser ouvidas
-						</p>
-						<img src="imagens/cd_60.png" alt="ícone cd de música">
-					</div>
-				</div>
-				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-				<a class="next" onclick="plusSlides(1)">&#10095;</a>
-			</div>
-			<div style="text-align:center">
-				<span class="dot" onclick="currentSlide(1)"></span>
-				<span class="dot" onclick="currentSlide(2)"></span>
-				<span class="dot" onclick="currentSlide(3)"></span>
 			</div>
 		</section>
 
 		<!-- CONVERSION -->
 		<section class="conversion" id="conversion">
 			<div class="title">
-				<p class="emoji">&#x2728 </p>
+				<p class="emoji">&#x2728; </p>
 				<h2>Como aproveitar ao máximo o Espaço em Terraria</h2>
-				<p class="emoji">&#x2728 </p>
+				<p class="emoji">&#x2728; </p>
 			</div>
 			<p class="description">
 				O espaço possui características únicas como camada do mundo, e não é de se estranhar que ao explorar o espaço, cada usuário possa ter uma visão diferente dele. Não só isso, como a dificuldade do jogo influencia diretamente nos inimigos e nos itens que aparecerão nele.<br>
 				Para chegar preparado no Espaço, e aproveitar ao máximo tudo que ele tem a oferecer, acesse nossa página e encontre várias informações que te ajudarão. Leia curiosidades, descubra novas possilidades, conheça todos os mobs, saiba o que você pode ganhar, e a cima de tudo, saiba como deixar a idá ao Espaço de Terraria o mais divertida possível.
 			</p>
-			<a class="button_conversion" href="https://terraria.fandom.com/pt/wiki/Espa%C3%A7o" rel="extern" target="_blank">Conhecer</a>
+			<a class="button_conversion description" href="https://terraria.fandom.com/pt/wiki/Espa%C3%A7o" rel="extern" target="_blank">Conhecer</a>
 		</section>
 
 		<!-- CONTACT -->
 		<section class="contact" id="contact">
-			<div class="title">
-				<h2>Caso tenha ficado com alguma dúvida, ou queira ajudar o site, nos mande uma mensagem</h2>
-			</div>
-			<div class="forms">
-				<form>
-					<fieldset style="border: 0">
-						<legend class="legend">Enviar mensagem</legend>
-						<label for="name">Nome</label>
-						<input type="text" id="name" class="description" required>
-						<label for="email">Email</label>
-						<input type="email" id="email" class="description" required>
-						<label for="title">Título</label>
-						<input type="text" id="title" class="description" required>
-						<label for="mensage">Texto da mensagem</label>
-						<textarea class="description" id="mensage" placeholder="Escreva sua mensagem aqui" required spellcheck="true" wrap="hard" rows="6"></textarea>
-						<button type="submit" class="form_button">Enviar</button>
-					</fieldset>
-				</form>
+			<div class="contact-itens">
+				<div class="title">
+					<h2>Caso tenha ficado com alguma dúvida, ou queira ajudar o site, nos mande uma mensagem</h2>
+				</div>
+				<div class="forms">
+					<form>
+						<fieldset style="border: 0">
+							<legend class="legend">Enviar mensagem</legend>
+							<label for="name">Nome</label>
+							<input type="text" id="name" class="description" required>
+							<label for="email">Email</label>
+							<input type="email" id="email" class="description" required>
+							<label for="title">Título</label>
+							<input type="text" id="title" class="description" required>
+							<label for="mensage">Texto da mensagem</label>
+							<textarea class="description" id="mensage" placeholder="Escreva sua mensagem aqui" required spellcheck="true" wrap="hard" rows="7"></textarea>
+							<button type="submit" class="form_button description">Enviar</button>
+						</fieldset>
+					</form>
+				</div>
 			</div>
 		</section>
 
 		<!-- FOOTER -->
 		<footer class="footer">
-			<p class="description">Conheça nossas redes:</p>
-			<a href="https://www.linkedin.com/company/re-logic" rel="extern" target="_blanck"><img src="imagens/linkedin_60.png" alt="Logo LinkedIn"></a>
-			<a href="https://www.instagram.com/terraria_logic/" rel="extern" target="_blanck"><img src="imagens/instagram_60.png" alt="Logo Instagram"></a>
-			<a href="https://www.facebook.com/TerrariaOfficial/" rel="extern" target="_blanck"><img src="imagens/facebook_60.png" alt="Logo Facebook"></a>
+			<div class="footer-itens">
+				<p class="description">Conheça nossas redes :</p>
+				<a href="https://www.linkedin.com/company/re-logic" rel="extern" target="_blanck"><img src="assets/linkedin_60.png" alt="Logo LinkedIn"></a>
+				<a href="https://www.instagram.com/terraria_logic/" rel="extern" target="_blanck"><img src="assets/instagram_60.png" alt="Logo Instagram"></a>
+				<a href="https://www.facebook.com/TerrariaOfficial/" rel="extern" target="_blanck"><img src="assets/facebook_60.png" alt="Logo Facebook"></a>
+			</div>
 		</footer>
-	</body>
 
+	</body>
 </html>

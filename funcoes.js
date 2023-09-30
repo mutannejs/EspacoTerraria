@@ -1,8 +1,13 @@
 function clickMenu() {
-	if (m_burguer.style.display == 'block')
-		m_burguer.style.display = 'none';
+	if (burguer_itens.style.display == 'block')
+		burguer_itens.style.display = 'none';
 	else
-		m_burguer.style.display = 'block';
+		burguer_itens.style.display = 'block';
+}
+
+function clickItem() {
+	if (burguer_itens.style.display == 'block')
+		burguer_itens.style.display = 'none';
 }
 
 let slideIndex = 1;
